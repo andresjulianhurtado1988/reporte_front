@@ -1,0 +1,26 @@
+<div class="align-title">
+  <h2><strong>INGRESOS</strong></h2>
+</div>
+<cdk-virtual-scroll-viewport appendOnly itemSize="50" class="example-viewport">
+  <div class="tittle-list" *ngFor="let item of datosTabla">
+    <div>
+      <p class="item-list">
+        <strong>{{ item.title }}: </strong>
+      </p>
+    </div>
+    <div>
+      <p class="item-list-dos" *ngFor="let col of item.columnas">
+        {{ col.column_name }}: {{ col.valores }}
+      </p>
+    </div>
+  </div>
+
+  <div class="tittle-list-total">
+    <div>
+      <p class="item-list-title-total"><strong>Total Ingresos:</strong></p>
+    </div>
+    <div>
+      <p class="item-list-total">{{ total }}</p>
+    </div>
+  </div>
+</cdk-virtual-scroll-viewport>

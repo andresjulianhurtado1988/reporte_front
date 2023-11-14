@@ -1,0 +1,105 @@
+<div class="container">
+  <div class="item-form">
+    <form
+      autocomplete="off"
+      [formGroup]="form"
+      (ngSubmit)="enviarDatos()"
+      target="TheWindow"
+    >
+      <div class="row">
+        <mat-form-field>
+          <mat-label>Ingrese un rango de fechas</mat-label>
+          <mat-date-range-input [rangePicker]="picker">
+            <input
+              matStartDate
+              placeholder="Start date"
+              formControlName="fechaIni"
+            />
+            <input
+              matEndDate
+              placeholder="End date"
+              formControlName="fechaFin"
+            />
+          </mat-date-range-input>
+
+          <mat-datepicker-toggle
+            matIconSuffix
+            [for]="picker"
+          ></mat-datepicker-toggle>
+          <mat-date-range-picker #picker></mat-date-range-picker>
+        </mat-form-field>
+      </div>
+
+      <hr />
+      <div class="row">
+        <button mat-raised-button color="primary">Enviar Fecha</button>
+      </div>
+    </form>
+  </div>
+  <div class="item-form">
+    <button
+      class="align-button-download"
+      mat-mini-fab
+      color="primary"
+      aria-label="Example icon button with a menu icon"
+      (click)="generarPdf()"
+    >
+      <mat-icon>get_app</mat-icon>
+    </button>
+    <div class="row">
+      <button
+        class="align-button-download"
+        mat-mini-fab
+        color="success"
+        (click)="viendoDatos()"
+      ></button>
+    </div>
+  </div>
+</div>
+
+<hr />
+<div *ngIf="reporte === true">
+  <div class="container">
+    <div class="item"><app-ingresos></app-ingresos></div>
+    <div class="item"><app-egresos></app-egresos></div>
+  </div>
+
+  <div class="container">
+    <div class="item">
+      <app-detalle-venta-articulos></app-detalle-venta-articulos>
+      <div class="item-prueba">
+        <app-detalle-otros-ingresos></app-detalle-otros-ingresos>
+      </div>
+    </div>
+    <div class="item-dos">
+      <app-detalle-egresos-gastos></app-detalle-egresos-gastos>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="item">
+      <app-detalle-retroventa-contratos></app-detalle-retroventa-contratos>
+    </div>
+    <div class="item">
+      <app-detalle-contratos-nuevos></app-detalle-contratos-nuevos>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="item">
+      <app-rango-factura-documentos></app-rango-factura-documentos>
+    </div>
+    <div class="item">
+      <app-totales></app-totales>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="item-caja">
+      <app-efectivo-caja></app-efectivo-caja>
+    </div>
+    <div class="item-caja">
+      <app-sobrante-faltante-caja></app-sobrante-faltante-caja>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,40 @@
+.example-viewport {
+  height: 290px;
+  width: 530px;
+  border: none;
+}
+
+.example-item {
+  height: 50px;
+}
+
+.align-title {
+  text-align: center;
+}
+
+.tittle-list {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.item-list {
+  width: 80px;
+}
+
+.item-list-dos {
+  margin-right: 50px;
+}
+
+.tittle-list-total {
+  display: flex;
+  justify-content: space-evenly;
+  margin-right: 140px;
+}
+
+.item-list-title-total {
+  width: 100px;
+}
+
+.item-list-total {
+  margin-right: 50px;
+}

@@ -1,0 +1,52 @@
+<div class="align-title">
+  <h2><strong>RANGOS FACTURAS Y/O DOCUMENTOS</strong></h2>
+</div>
+<div>
+  <cdk-virtual-scroll-viewport
+    appendOnly
+    itemSize="50"
+    class="example-viewport"
+  >
+    <div class="container-list">
+      <div>
+        <ul class="list-style">
+          <li class="item-list">
+            <span><strong>Rango de Contratos: </strong></span>
+          </li>
+          <li class="item-list">
+            <span><strong>Factura de Venta: </strong></span>
+          </li>
+          <li class="item-list">
+            <span><strong>Facturas Resoluciones: </strong></span>
+          </li>
+          <li class="item-list">
+            <span><strong>Facturas Resoluciones: </strong></span>
+          </li>
+          <li class="item-list">
+            <span><strong>Facturas Prórrogas: </strong></span>
+          </li>
+        </ul>
+      </div>
+
+      <div>
+        <ul class="list-style">
+          <li class="item-list">
+            <span>{{ rangos }}</span>
+          </li>
+          <li class="item-list">
+            <span>{{ facturas_ventas }}</span>
+          </li>
+          <li class="item-list">
+            <span>{{ facturas_resoluciones }}</span>
+          </li>
+          <li class="item-list">
+            <span>{{ facturas_resoluciones2 }}</span>
+          </li>
+          <li class="item-list">
+            <span>{{ facturas_prorrogas }}</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </cdk-virtual-scroll-viewport>
+</div>

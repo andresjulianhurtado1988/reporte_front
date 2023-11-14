@@ -1,0 +1,45 @@
+<div class="align-title">
+  <h2><strong>EFECTIVO EN CAJA</strong></h2>
+</div>
+<div>
+  <cdk-virtual-scroll-viewport
+    appendOnly
+    itemSize="50"
+    class="example-viewport"
+  >
+    <div class="container-list">
+      <div>
+        <ul class="list-style">
+          <li class="item-list">
+            <span><strong>BILLETES: </strong></span>
+          </li>
+          <li class="item-list">
+            <span><strong>MONEDAS: </strong></span>
+          </li>
+          <li class="item-list">
+            <span><strong>OTROS: </strong></span>
+          </li>
+          <li class="item-list">
+            <span><strong>TOTAL EFECTIVO: </strong></span>
+          </li>
+        </ul>
+      </div>
+      <div>
+        <ul class="list-style">
+          <li class="item-list">
+            <span>{{ billetes }}</span>
+          </li>
+          <li class="item-list">
+            <span>{{ monedas }}</span>
+          </li>
+          <li class="item-list">
+            <span>{{ otros }}</span>
+          </li>
+          <li class="item-list">
+            <span>{{ total }}</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </cdk-virtual-scroll-viewport>
+</div>

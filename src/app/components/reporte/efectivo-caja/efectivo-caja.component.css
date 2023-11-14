@@ -1,0 +1,31 @@
+.example-viewport {
+  height: 290px;
+  width: 530px;
+  border: none;
+}
+
+.example-item {
+  height: 50px;
+}
+
+.align-title {
+  text-align: center;
+}
+
+.item-list {
+  margin-top: 25px;
+  margin-left: 30px;
+  width: 180px;
+  height: 15px;
+  line-height: 0.3;
+}
+
+.list-style {
+  list-style: none;
+}
+
+.container-list {
+  margin-top: 5px;
+  display: flex;
+  justify-content: space-evenly;
+}

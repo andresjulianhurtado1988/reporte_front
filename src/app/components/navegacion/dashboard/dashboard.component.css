@@ -1,0 +1,49 @@
+.container {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.item {
+  width: 550px;
+  border-color: black;
+  border-radius: 30px;
+  border: solid;
+  height: 350px;
+}
+
+.item-dos {
+  width: 550px;
+  border-color: black;
+  border-radius: 30px;
+  border: solid;
+  height: 721px;
+}
+
+.item-prueba {
+  margin-top: 30px;
+  width: 550px;
+  border-color: black;
+  border-radius: 30px;
+  border: solid;
+  height: 350px;
+}
+
+.item-caja {
+  width: 550px;
+  border-color: black;
+  border-radius: 30px;
+  border: solid;
+  height: 250px;
+}
+
+.align-button-download {
+  margin-top: 95px;
+  float: left;
+}
+
+.item-form {
+  width: 550px;
+
+  height: 150px;
+}

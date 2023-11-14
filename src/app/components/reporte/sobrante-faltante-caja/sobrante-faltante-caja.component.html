@@ -1,0 +1,33 @@
+<div class="align-title">
+  <h2><strong>SOBRANTE O FALTANTE EN CAJA</strong></h2>
+</div>
+<div>
+  <cdk-virtual-scroll-viewport
+    appendOnly
+    itemSize="50"
+    class="example-viewport"
+  >
+    <div class="container-list">
+      <div>
+        <ul class="list-style">
+          <li class="item-list">
+            <span><strong>SOBRANTE: </strong></span>
+          </li>
+          <li class="item-list">
+            <span><strong>FALTANTE: </strong></span>
+          </li>
+        </ul>
+      </div>
+      <div>
+        <ul class="list-style">
+          <li class="item-list">
+            <span>{{ sobrante }}</span>
+          </li>
+          <li class="item-list">
+            <span>{{ faltante }}</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </cdk-virtual-scroll-viewport>
+</div>

@@ -1,0 +1,51 @@
+<div class="align-title">
+  <h2><strong>TOTALES</strong></h2>
+</div>
+<div>
+  <cdk-virtual-scroll-viewport
+    appendOnly
+    itemSize="50"
+    class="example-viewport"
+  >
+    <div class="container-list">
+      <div>
+        <ul class="list-style">
+          <li class="item-list">
+            <span><strong>SALDO INICIAL EN CAJA: </strong></span>
+          </li>
+          <li class="item-list">
+            <span><strong>Total Ingresos -Egresos: </strong></span>
+          </li>
+          <li class="item-list">
+            <span><strong>Saldoen Caja Actual: </strong></span>
+          </li>
+          <li class="item-list">
+            <span><strong>Usuario Estación: </strong></span>
+          </li>
+          <li class="item-list">
+            <span><strong>Estación de Trabajo: </strong></span>
+          </li>
+        </ul>
+      </div>
+      <div>
+        <ul class="list-style">
+          <li class="item-list">
+            <span>{{ saldo_inicial }}</span>
+          </li>
+          <li class="item-list">
+            <span>{{ total_ingresos_egresos }}</span>
+          </li>
+          <li class="item-list">
+            <span>{{ saldo_actual_caja }}</span>
+          </li>
+          <li class="item-list">
+            <span>{{ usuario_estacion }}</span>
+          </li>
+          <li class="item-list">
+            <span>{{ estacion_trabajo }}</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </cdk-virtual-scroll-viewport>
+</div>
