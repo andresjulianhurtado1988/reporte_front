@@ -1,43 +1,42 @@
 <div class="align-title">
-    <h2><strong>DETALLE RETROVENTAS CONTRATOS</strong></h2>
-  </div>
-  <div>
-    <cdk-virtual-scroll-viewport
-      appendOnly
-      itemSize="50"
-      class="example-viewport"
+  <h2><strong>DETALLE CONTRATOS NUEVOS</strong></h2>
+</div>
+<div>
+  <cdk-virtual-scroll-viewport
+    appendOnly
+    itemSize="50"
+    class="example-viewport"
+  >
+    <table
+      mat-table
+      [dataSource]="datosTabla"
+      class="mat-elevation-z8"
+      style="margin-top: 20px"
     >
-      <table
-        mat-table
-        [dataSource]="datosTabla"
-        class="mat-elevation-z8"
-        style="margin-top: 20px"
-      >
-        <ng-container matColumnDef="descripcion">
-          <th mat-header-cell *matHeaderCellDef>Descripción</th>
-          <td mat-cell *matCellDef="let element">{{ element.descripcion }}</td>
-        </ng-container>
-  
-        <ng-container matColumnDef="gramos">
-          <th mat-header-cell *matHeaderCellDef>Gramos</th>
-          <td mat-cell *matCellDef="let element">{{ element.gramos }}</td>
-        </ng-container>
-  
-        <ng-container matColumnDef="valor_articulos">
-          <th mat-header-cell *matHeaderCellDef>Valor Artículos</th>
-          <td mat-cell *matCellDef="let element">
-            {{ element.valor_articulos }}
-          </td>
-        </ng-container>
-  
-        <ng-container matColumnDef="promedio">
-          <th mat-header-cell *matHeaderCellDef>Promedio Vlr/Grm</th>
-          <td mat-cell *matCellDef="let element">{{ element.promedio }}</td>
-        </ng-container>
-  
-        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-        <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
-      </table>
-    </cdk-virtual-scroll-viewport>
-  </div>
-  
+      <ng-container matColumnDef="descripcion">
+        <th mat-header-cell *matHeaderCellDef>Descripción</th>
+        <td mat-cell *matCellDef="let element">{{ element.descripcion }}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="gramos">
+        <th mat-header-cell *matHeaderCellDef>Gramos</th>
+        <td mat-cell *matCellDef="let element">{{ element.gramos }}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="valor_articulos">
+        <th mat-header-cell *matHeaderCellDef>Valor Artículos</th>
+        <td mat-cell *matCellDef="let element">
+          {{ element.valor_articulos }}
+        </td>
+      </ng-container>
+
+      <ng-container matColumnDef="promedio">
+        <th mat-header-cell *matHeaderCellDef>Promedio Vlr/Grm</th>
+        <td mat-cell *matCellDef="let element">{{ element.promedio }}</td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+    </table>
+  </cdk-virtual-scroll-viewport>
+</div>
