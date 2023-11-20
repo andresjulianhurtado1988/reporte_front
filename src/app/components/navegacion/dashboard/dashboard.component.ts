@@ -38,29 +38,29 @@ export class DashboardComponent {
   }
 
   generarPdf() {
-    // var fechaIni = new Date();
-    // var fechaFin = new Date();
-    // var optionsFechaIni = { day: 'numeric', month: 'numeric', year: 'numeric' };
-    // var optionsFechaFin = { day: 'numeric', month: 'numeric', year: 'numeric' };
+    var fechaIni = new Date();
+    var fechaFin = new Date();
+    var optionsFechaIni = { day: 'numeric', month: 'numeric', year: 'numeric' };
+    var optionsFechaFin = { day: 'numeric', month: 'numeric', year: 'numeric' };
 
-    // var misTiendas = [1, 3, 5, 7, 4];
+    var misTiendas = [1, 3, 5, 7, 4];
 
-    // fechaIni = this.form.value['fechaIni'].toLocaleDateString(
-    //   'es-ES',
-    //   optionsFechaIni
-    // );
+    fechaIni = this.form.value['fechaIni'].toLocaleDateString(
+      'es-ES',
+      optionsFechaIni
+    );
 
-    // fechaFin = this.form.value['fechaFin'].toLocaleDateString(
-    //   'es-ES',
-    //   optionsFechaFin
-    // );
+    fechaFin = this.form.value['fechaFin'].toLocaleDateString(
+      'es-ES',
+      optionsFechaFin
+    );
 
-    // const datosFilter = {
-    //   misTiendas: misTiendas,
-    //   fechaIni: fechaIni,
-    //   fechaFin: fechaFin,
-    // };
-    var datosFilter = 'algo';
+    const datosFilter = {
+      misTiendas: misTiendas,
+      fechaIni: fechaIni,
+      fechaFin: fechaFin,
+    };
+
     this.datosService.generarPdf(datosFilter).subscribe((resp) => {
       const filename = 'pdfContable.pdf';
       var fileURL = URL.createObjectURL(resp);

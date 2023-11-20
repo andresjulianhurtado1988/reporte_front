@@ -32,16 +32,19 @@
 
       <hr />
       <div class="row">
-        <button mat-raised-button color="primary">Enviar Fecha</button>
+        <button mat-raised-button color="primary" [disabled]="form.invalid">
+          Enviar Fecha
+        </button>
       </div>
     </form>
   </div>
-  <div class="item-form">
+  <div class="item-form" >
     <button
       class="align-button-download"
       mat-mini-fab
       color="primary"
       aria-label="Example icon button with a menu icon"
+      *ngIf="reporte"
       (click)="generarPdf()"
     >
       <mat-icon>get_app</mat-icon>

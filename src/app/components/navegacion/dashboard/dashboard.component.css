@@ -6,18 +6,12 @@
 
 .item {
   width: 550px;
-  border-color: black;
-  border-radius: 30px;
-
   border: 1px black solid;
   height: 350px;
 }
 
 .item-dos {
   width: 550px;
-  border-color: black;
-  border-radius: 30px;
-
   border: 1px black solid;
   height: 721px;
 }
@@ -25,17 +19,12 @@
 .item-prueba {
   margin-top: 30px;
   width: 550px;
-  border-color: black;
-  border-radius: 30px;
   border: 1px black solid;
   height: 350px;
 }
 
 .item-caja {
   width: 550px;
-  border-color: black;
-  border-radius: 30px;
-
   border: 1px black solid;
   height: 250px;
 }
@@ -47,6 +36,5 @@
 
 .item-form {
   width: 550px;
-
   height: 150px;
 }
