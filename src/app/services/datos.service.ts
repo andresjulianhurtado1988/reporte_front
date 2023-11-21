@@ -49,4 +49,15 @@ export class DatosService {
     });
   }
 
+  generarExcel(): Observable<any> {
+    let json = 'hola mundo'
+    let params = 'json=' + json;
+
+    return this._http.post(this.url + 'generarExcel', params, {
+      headers: new HttpHeaders({
+        'Content-type': 'application/x-www-form-urlencoded',
+      }),
+      responseType: 'blob',
+    });
+  }
 }

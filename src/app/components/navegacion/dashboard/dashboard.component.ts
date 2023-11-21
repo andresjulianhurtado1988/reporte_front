@@ -74,10 +74,13 @@ export class DashboardComponent {
     });
   }
 
-  viendoDatos() {
-    this.datosService.pruebaRuta().subscribe((respuesta) => {
-      console.log(respuesta);
+  generarExcel() {
+    this.datosService.generarExcel().subscribe((respuesta) => {
+      const filename = 'reporte.xlsx';
+      var link = document.createElement('a');
+      link.href = window.URL.createObjectURL(respuesta);
+      link.download = filename;
+      link.click();
     });
-    console.log('entrando al console');
   }
 }

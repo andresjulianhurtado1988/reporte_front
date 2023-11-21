@@ -38,7 +38,7 @@
       </div>
     </form>
   </div>
-  <div class="item-form" >
+  <div class="item-form">
     <button
       class="align-button-download"
       mat-mini-fab
@@ -53,9 +53,12 @@
       <button
         class="align-button-download"
         mat-mini-fab
-        color="success"
-        (click)="viendoDatos()"
-      ></button>
+        aria-label="Example icon button with a menu icon"
+        color="warn"
+        (click)="generarExcel()"
+      >
+        <mat-icon>get_app</mat-icon>
+      </button>
     </div>
   </div>
 </div>
