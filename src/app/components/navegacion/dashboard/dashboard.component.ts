@@ -83,4 +83,14 @@ export class DashboardComponent {
       link.click();
     });
   }
+
+  reportePdfConsolidado() {
+    const datosFilter = 'hola mundo';
+
+    this.datosService.reportePdfConsolidado(datosFilter).subscribe((resp) => {
+      const filename = 'pdfDatosConsolidado.pdf';
+      var fileURL = URL.createObjectURL(resp);
+      window.open(fileURL, '_blank');
+    });
+  }
 }
