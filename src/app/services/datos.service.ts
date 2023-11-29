@@ -41,8 +41,8 @@ export class DatosService {
     });
   }
 
-  reportePdfConsolidado(datosFilter: any): Observable<Blob> {
-    let json = JSON.stringify(datosFilter);
+  reportePdfConsolidado(misTiendas: any): Observable<Blob> {
+    let json = JSON.stringify(misTiendas);
     let params = 'json=' + json;
 
     return this._http.post(this.url + 'reportePdfConsolidado', params, {

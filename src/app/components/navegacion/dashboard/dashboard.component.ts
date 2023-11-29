@@ -85,9 +85,9 @@ export class DashboardComponent {
   }
 
   reportePdfConsolidado() {
-    const datosFilter = 'hola mundo';
+    var misTiendas = [1, 3, 5, 7, 4];
 
-    this.datosService.reportePdfConsolidado(datosFilter).subscribe((resp) => {
+    this.datosService.reportePdfConsolidado(misTiendas).subscribe((resp) => {
       const filename = 'pdfDatosConsolidado.pdf';
       var fileURL = URL.createObjectURL(resp);
       window.open(fileURL, '_blank');
