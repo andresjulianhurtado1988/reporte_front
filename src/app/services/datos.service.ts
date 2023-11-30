@@ -29,6 +29,14 @@ export class DatosService {
     });
   }
 
+  allJoyerias(): Observable<any> {
+    return this._http.get(this.url + 'allJoyerias', {
+      headers: new HttpHeaders({
+        'Content-type': 'application/x-www-form-urlencoded',
+      }),
+    });
+  }
+
   generarPdf(datosFilter: any): Observable<Blob> {
     let json = JSON.stringify(datosFilter);
     let params = 'json=' + json;
@@ -41,8 +49,8 @@ export class DatosService {
     });
   }
 
-  reportePdfConsolidado(misTiendas: any): Observable<Blob> {
-    let json = JSON.stringify(misTiendas);
+  reportePdfConsolidado(joyeria_id: any): Observable<Blob> {
+    let json = JSON.stringify(joyeria_id);
     let params = 'json=' + json;
 
     return this._http.post(this.url + 'reportePdfConsolidado', params, {

@@ -28,6 +28,15 @@
           ></mat-datepicker-toggle>
           <mat-date-range-picker #picker></mat-date-range-picker>
         </mat-form-field>
+
+        <mat-form-field>
+          <mat-label>Joyerías</mat-label>
+          <mat-select formControlName="joyeria_id" multiple>
+            <mat-option *ngFor="let item of AllJoyerias" [value]="item.id">{{
+              item.nombre_joyeria
+            }}</mat-option>
+          </mat-select>
+        </mat-form-field>
       </div>
 
       <hr />
@@ -54,13 +63,14 @@
       class="align-button-download"
       mat-mini-fab
       aria-label="Example icon button with a menu icon"
+      *ngIf="reporte"
       color="accent"
       (click)="reportePdfConsolidado()"
     >
       <mat-icon>get_app</mat-icon>
     </button>
 
-    <button
+    <!-- <button
       class="align-button-download"
       mat-mini-fab
       aria-label="Example icon button with a menu icon"
@@ -68,7 +78,7 @@
       (click)="generarExcel()"
     >
       <mat-icon>get_app</mat-icon>
-    </button>
+    </button> -->
   </div>
 </div>
 
