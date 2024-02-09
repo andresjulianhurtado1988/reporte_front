@@ -1,13 +1,13 @@
 import { Component } from '@angular/core';
-import { FormArray, FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { DatosService } from 'src/app/services/datos.service';
 
 @Component({
-  selector: 'app-dashboard',
-  templateUrl: './dashboard.component.html',
-  styleUrls: ['./dashboard.component.css'],
+  selector: 'app-reportes-pdf',
+  templateUrl: './reportes-pdf.component.html',
+  styleUrls: ['./reportes-pdf.component.css'],
 })
-export class DashboardComponent {
+export class ReportesPDFComponent {
   public form: FormGroup;
   today = new Date();
 
@@ -32,8 +32,6 @@ export class DashboardComponent {
   allJoyerias() {
     this.datosService.allJoyerias().subscribe((resp) => {
       this.AllJoyerias = resp.joyerias;
-
-      console.log(this.AllJoyerias);
     });
   }
 
@@ -54,7 +52,6 @@ export class DashboardComponent {
     var fechaFin = new Date();
     var optionsFechaIni = { day: 'numeric', month: 'numeric', year: 'numeric' };
     var optionsFechaFin = { day: 'numeric', month: 'numeric', year: 'numeric' };
-
     var misTiendas = [1, 3, 5, 7, 4];
 
     fechaIni = this.form.value['fechaIni'].toLocaleDateString(
@@ -77,12 +74,6 @@ export class DashboardComponent {
       const filename = 'pdfContable.pdf';
       var fileURL = URL.createObjectURL(resp);
       window.open(fileURL, '_blank');
-
-      // el método de abajo, me permite descargar directamente el pdf
-      // var link = document.createElement('a');
-      // link.href = window.URL.createObjectURL(resp);
-      // link.download = filename;
-      // link.click();
     });
   }
 
@@ -97,9 +88,6 @@ export class DashboardComponent {
   }
 
   reportePdfConsolidado() {
-    // var optionsFechaIni = { day: 'numeric', month: 'numeric', year: 'numeric' };
-    //  var optionsFechaFin = { day: 'numeric', month: 'numeric', year: 'numeric' };
-
     const datosFilter = {
       misTiendas: this.form.value['joyeria_id'],
       fechaIni: this.form.value['fechaIni'].toLocaleDateString('es-ES', {

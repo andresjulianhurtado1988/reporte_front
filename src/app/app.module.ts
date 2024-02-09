@@ -10,7 +10,6 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
-import { DashboardComponent } from './components/navegacion/dashboard/dashboard.component';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatCardModule } from '@angular/material/card';
 import { MatMenuModule } from '@angular/material/menu';
@@ -27,12 +26,12 @@ import { EfectivoCajaComponent } from './components/reporte/efectivo-caja/efecti
 import { SobranteFaltanteCajaComponent } from './components/reporte/sobrante-faltante-caja/sobrante-faltante-caja.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ReportesPDFComponent } from './components/generar-reporte-pdf/reportes-pdf/reportes-pdf.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavigationComponent,
-    DashboardComponent,
     IngresosComponent,
     EgresosComponent,
     DetalleVentaArticulosComponent,
@@ -43,7 +42,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     RangoFacturaDocumentosComponent,
     TotalesComponent,
     EfectivoCajaComponent,
-    SobranteFaltanteCajaComponent
+    SobranteFaltanteCajaComponent,
+    ReportesPDFComponent,
   ],
   imports: [
     HttpClientModule,
@@ -60,9 +60,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     MatListModule,
     MatGridListModule,
     MatCardModule,
-    MatMenuModule
+    MatMenuModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
